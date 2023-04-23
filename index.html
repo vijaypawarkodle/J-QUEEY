@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .red {
+        color: red;
+        background-color: greenyellow;
+    }
+</style>
+
+<body>
+    <p class="cv2"></p>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eum debitis cumque cum neque deserunt
+        quis fugit nam ab totam.</p>
+    <p class="p2">this is data of fist paragraph</p>
+
+    <div class="cv" style="background-color: aquamarine; border: 6px solid red;">
+        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, ullam commodi?</h2>
+        <p class="cvv">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae nostrum magnam impedit.</p>
+        <button class="ebtn">empty</button>
+        <button class="rbtn">remove</button>
+        <button class="abtn">add</button>
+
+    </div>
+    <p></p>
+    <button class="hide">hide</button>
+    <button class="ebtn">empty</button>
+    <button class="rbtn">remove</button>
+    <button class="abtn">add</button>
+
+    <button class="c-abtn">clone-app</button>
+    <button class="c-pbtn">clone-pre</button>
+
+    <button class="rwbtn">Replace-with</button>
+    <button class="rabtn">Replace-all</button>
+
+
+    <script>
+        $('document').ready(function () {
+            $('.ebtn').click(function () {
+                $('.cv').empty()
+            })
+
+
+            $('.rbtn').click(function () {
+                $('.cv').remove()
+            })
+            $('.abtn').click(function () {
+                $('<i>lorem30<i>').prependTo('p')
+            })
+
+            $(".c-abtn").click(function () {
+                $('.cv').clone().appendTo('.cv2')
+            })
+            $('.c-pbtn').click(function () {
+                $('.cv').clone().prependTo('.cv2')
+            })
+
+            $('.rwbtn').click(function () {
+                $('.p1').replaceWith('this is data for replace')
+            })
+            $('.rabtn').click(function () {
+                $('this is new data replace all methosd').replaceAll('.cv p')
+            })
+
+
+
+        })
+
+
+            < script >
+            $(document).ready(function () {
+                $("hide").click(function () {
+                    $(this).hide(1000);
+                });
+            });
+    </script>
+
+
+
+
+
+
+
+    // document.write('hello')
+    // alert('hello')
+
+    </script>
+</body>
+
+</html>
